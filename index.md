@@ -4,8 +4,12 @@ title: WormLikeChain
 
 # Welcome
 
-A blog about my TTRPG related thoughts. 
+Hi, I'm Chris.
 
-## Recent Posts
+![[chris_ukge.webp]]
+I love Fantasy and Sci-Fi in almost all its forms, especially the elfgame and its derivatives. Tending towards more open games in an old-school style, though I'll play just about anything. 
+I sometimes have thoughts, this is somewhere I can put them. 
 
-Browse posts or subscribe via [RSS](/index.xml)
+
+
+Subscribe via [RSS](/index.xml)
