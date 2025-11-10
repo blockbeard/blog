@@ -3,8 +3,5 @@
 drafts/
 assets/
 *.pdf
-*.png
-*.jpg
-*.jpeg
-*.bmp
-"Setup and Troubleshooting.md"
+README.md
+private/
