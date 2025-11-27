@@ -5,3 +5,6 @@ assets/
 *.pdf
 README.md
 private/
+Setup and Troubleshooting.md
+templates/
+/.DS_Store
