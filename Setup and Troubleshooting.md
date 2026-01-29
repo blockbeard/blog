@@ -701,6 +701,21 @@ curl "https://blog.wormlikechain.com/comments/?uri=/test"
 sudo systemctl restart isso
 ```
 
+### Comments Not Showing After Deploy
+
+**Cause:** Stale `.quartz-cache` directory
+
+**Fix:** The deploy script now cleans the cache automatically. If comments break again:
+```bash
+ssh prometheus
+cd /home/chris/quartz-blog
+rm -rf public .quartz-cache
+npx quartz build
+sudo cp -r public/* /var/www/blog/
+```
+
+**Prevention:** Already in `/home/chris/update-blog.sh` - cache is cleaned before every build.
+
 ---
 
 ### Dark Mode Text Invisible
