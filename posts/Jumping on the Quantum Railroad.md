@@ -29,12 +29,12 @@ Along with his quantum butterfly minions he keeps himself occupied using his new
 # Environment
 ## Quantum Tunnel
 
-**Tier:** 2  
-**Type:** Event  
-
+**Tier 2 Event**  
 *The party have become the targets of the Quantum Ogre, a confrontation is inevitable.*  
-
 **Impulses:** To bring about the confrontation.  
+
+---
+**Difficulty:** 14
 **Potential Adversaries:** Quantum Ogre, Quantum Butterflies  
 
 ---
@@ -42,7 +42,7 @@ Along with his quantum butterfly minions he keeps himself occupied using his new
 **Many Worlds Interpretation - Passive:** A PC who takes a rest in this environment will be troubled by visions of another version of themselves living lives similar but unlike theirs. On finishing their rest they mark a stress. 
 *How is the other life different? What past decision led to the change?*
 
-**Observer Effect - Reaction:** If you add a trait to an action roll while another PC can see you, use their trait modifier instead of yours. If more than one can see you then use the closest. 
+**Observer Effect - Passive:** When a PC makes an action roll to which they add a trait while another PC can see them, they use the observing PC's trait modifier instead of their own. If more than one can see them then use the closest. 
 *How does being observed change the outcome?*
 
 **Uncertainty Principle - Action:** The PCs are approached by a witness who complains of being attacked by an ogre. If questioned by the PCs they will give details but can only remember either where it happened or when. Whichever they explain first they cannot recall anything of the other. 
@@ -57,15 +57,17 @@ If the PCs attempt to track the ogre there will be two sets of tracks, both genu
 *An ogre twisted into something new by a magical accident. There is only one, but quantum effects can make it seem there are more*  
 **Motives & Tactics:** crush you, eat your bones  
 
+---
 **Difficulty:** 14 | **Thresholds:** 13/27 | **HP:** 8 | **Stress:** 6  
 **ATK:** +3 | **Club:** Very Close | 2d12+4 PHY  
 **Experience:** Brutal +2  
 
+---
 **FEATURES**
 **Relentless (2) - Passive:** The ogre can be spotlighted up to two times per GM turn. Spend fear as usual to spotlight them.
 
 **Schrodinger's Splat - Action:** **Mark a Stress** to strike a target within Very Close range. 
-The target marks a stress and becomes *Wounded?* 
+The target marks a stress and becomes *Wounded?*
 When a *Wounded?* target makes an action roll they clear *Wounded?* and if the roll was with Fear the target takes **2d12+4** direct physical damage.
 
 **Superposition Strike - Action: Spend a Fear** to make an attack against all targets within Close. If the attack succeeds against any of them they all take **2d12+4** physical damage.  
@@ -77,20 +79,20 @@ When a *Wounded?* target makes an action roll they clear *Wounded?* and if the r
 ---
 ## Quantum Butterfly
 
-**Tier:** 2
-**Type:** Support  
-
+**Tier 2 Support**  
 *A butterfly whose slightest flutter might cause unknown consequences*  
 
 **Motives & Tactics:** Complicate reality, follow the Quantum Ogre  
 
+---
 **Difficulty:** 15 | **Thresholds:** 8/18 | **HP:** 3 | **Stress:** 2  
 **ATK:** +2 | **Tear reality:** Far | 2d4+3 MAG  
 **Experience:** Change by observation +2  
 
+---
 **FEATURES**
 
-**Butterfly Effect - Action:** *Mark a Stress* to make an attack roll against a target in far range. On a success deal **2d4+3** magic damage. The next time the target is spotlighted creatures within Close range of them take the same damage.
+**Butterfly Effect - Action:** **Mark a Stress** to make an attack roll against a target in far range. On a success deal **2d4+3** magic damage. The next time the target is spotlighted creatures within Close range of them take the same damage.
 
 **Probability Storm - Reaction:** Once per encounter when a PC makes an action roll you may force them to swap the values of the hope and fear dice.
 
