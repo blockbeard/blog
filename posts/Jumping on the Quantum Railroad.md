@@ -94,7 +94,7 @@ When a *Wounded?* target makes an action roll they clear *Wounded?* and if the r
 
 **Butterfly Effect - Action:** **Mark a Stress** to make an attack roll against a target in far range. On a success deal **2d4+3** magic damage. The next time the target is spotlighted creatures within Close range of them take the same damage.
 
-**Probability Storm - Reaction:** Once per encounter when a PC makes an action roll you may force them to swap the values of the hope and fear dice.
+**Probability Storm - Reaction:** Once per scene, when a PC makes an action roll, swap the values of the hope and fear dice.
 
 ---
 ## How to use the Quantum Ogre
