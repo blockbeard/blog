@@ -11,7 +11,8 @@ They ran a Kickstarter which raised $1.15 million dollars, and in mid-2024, duly
 
 # Tales of the Valiant
 ToV follows the D&D tradition of three core books, a Players Guide (PG), Monster Vault (MV) and Game Masters Guide (GMG). The main change in terms of content is that the Player's Guide contains the magic item descriptions meaning that the Game Master's Guide is less necessary for play. It is largely compatible with D&D 5e14 and 5e24 as well as third party supplements for them. 
-## Player's GuideThis contains the bulk of the rules needed to make a character and play the game. 
+## Player's Guide
+This contains the bulk of the rules needed to make a character and play the game. 
 I like the character rules, subclasses are a little limited at two per class but there is still good variety. 
 Kobold Press split "race" into lineage and heritage which is a nice way to allow players to either lean into fantasy archetypes or play against them. You pick ability scores once to get numbers that match D&D's but sidestep exactly what contributes to them and you don't need to pick them then work out where the bonuses go. Elegant design. 
 Talents replace feats and they are split into magic, martial and technical with classes being able to choose from the one relevant to them. Players take appropriate feats that aren't tied to ability scores and your fighters don't suddenly gain the ability to cast spells from nowhere. 
