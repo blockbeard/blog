@@ -106,5 +106,6 @@ There is only one real ogre but it exists in several quantum states which will c
 Whether you run it as a self-aware silly encounter with physics puns and math jokes or seriously as a magical assassin I hope you have fun with it, or at least take some inspiration. 
 If you try them let me know how it goes, and if you have any ideas how you would build a Quantum Ogre in your favourite system I'd love to hear it. 
 
+If you like this I have a [laid out version available for purchase on itch.io](https://wormlikechain.itch.io/the-quantum-ogre)
 
 Subscribe via [RSS](/index.xml)
