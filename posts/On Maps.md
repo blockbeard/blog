@@ -2,6 +2,7 @@ I read noise sans signal's post on [the Bloggies missing a poetry category](http
 This is my first poem since I was forced to write one in school several decades ago. 
 # The Map is Not the Territory
 
+<pre style="font-family: inherit; white-space: pre-line;">
 When I was a child, 
 I would open a book 
 and be excited to see a map inside. 
@@ -60,5 +61,5 @@ or on nostalgia yellow.
 
 The map is not the territory, 
 but it takes you there anyway.
-
+</pre>
 
