@@ -6,7 +6,9 @@ description: |-
   A reflection on how Jim Henson's advice about collaboration applies to running and playing TTRPGs, breaking it down into five principles: talent, trust, ideas, space, and invitation. 
   What makes great games isn't system mastery or acting ability, it's building an environment where everyone at the table feels safe to contribute and where those contributions matter.
 ---
-![[Jim_Henson_and_the_Muppets.webp]]I came across this in a patreon post from [Iris Compiet](https://www.patreon.com/posts/so-many-feelings-152679083), an artist I follow, talking about a discussion she had moderated.
+![[Jim_Henson_and_the_Muppets.webp]]
+
+I came across this in a Patreon post from [Iris Compiet](https://www.patreon.com/posts/so-many-feelings-152679083), an artist I follow, talking about a discussion she had moderated.
  
 > There is a story about a young boy meeting Jim Henson at an exhibition for The Dark Crystal. Urged by his mother to ask a question, the boy looked around at the creatures, the costumes, the fantastic world and asked, "How did you make all of this?" Henson didn't talk about glue or fabric. Instead, he told him:
 > 
