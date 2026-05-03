@@ -1,29 +1,37 @@
 # WormLikeChain Blog - Complete Setup Reference
 
-**Last Updated:** 2025-11-10
+**Last Updated:** 2026-05-03
 
 ---
 
 ## Overview
 
-Self-hosted blog at **blog.wormlikechain.com** using Quartz static site generator with automatic deployment via GitHub webhooks. Comments powered by self-hosted Isso. Part of the homelab infrastructure running on Prometheus (Raspberry Pi 5).
+Self-hosted blog at **blog.wormlikechain.com** using Quartz static site generator with automatic deployment via GitHub webhooks. Comments powered by self-hosted Isso. After each build, the blog's RSS feed is also pushed into the [literary-generators](https://github.com/blockbeard/literary-generators) GitHub repo so that site's "From the Blog" sidebar auto-updates. Part of the homelab infrastructure running on Prometheus (Raspberry Pi 5).
 
 ---
 
 ## Architecture
 
 ```
-Obsidian (Athena) → GitHub → Webhook (Prometheus) → Quartz Build → Nginx → Cloudflare Tunnel → Web
-                                                                              ↓
-                                                                           Isso Comments (port 8081)
+Obsidian (Athena) → blockbeard/blog (GitHub) → Webhook (Prometheus) → Quartz Build → Nginx → Cloudflare → Web
+                                                          │                          ↓
+                                                          ↓                   Isso Comments (8081)
+                                            GitHub Contents API PUT
+                                                          ↓
+                                  blockbeard/literary-generators (_data/blog-feed.xml)
+                                                          ↓
+                                                   GitHub Action
+                                                          ↓
+                                       literary-generators rebuilds (GitHub Pages)
 ```
 
 **Key Components:**
 
-- **Athena (MacBook Pro M4 Max):** Content creation in Obsidian
-- **GitHub:** Repository hosting and webhook trigger
-- **Prometheus (Raspberry Pi 5):** Build server, web server, comment server
-- **Cloudflare:** Tunnel for secure access
+- **Athena (MacBook Pro M4 Max):** Content creation in Obsidian; canonical home of `quartz-config/` (in the blog repo)
+- **GitHub `blockbeard/blog`:** Content + Quartz config; webhook trigger on push
+- **GitHub `blockbeard/literary-generators`:** Companion static site; rebuilds when Pi PUTs a new RSS snapshot
+- **Prometheus (Raspberry Pi 5):** Build server, web server, comment server, dispatcher to literary-generators
+- **Cloudflare:** Tunnel for secure access (do not run runtime fetches against `blog.wormlikechain.com` from a workflow runner — Bot Fight Mode 403s GitHub Actions IPs)
 - **Isso:** Self-hosted comment system
 
 ---
@@ -33,35 +41,40 @@ Obsidian (Athena) → GitHub → Webhook (Prometheus) → Quartz Build → Nginx
 ### Athena (Content Creation)
 
 ```
-/Users/chriswilson/Documents/RPG/blog/
+/Users/chriswilson/Documents/blog/
 ├── .obsidian/                    # Obsidian config (gitignored)
 ├── .git/                         # Git repository
 ├── drafts/                       # Work-in-progress posts (gitignored)
 ├── assets/                       # Working assets (gitignored)
-├── reviews/                      # Published: Review posts
-├── musings/                      # Published: Thoughts/musings
-├── tutorials/                    # Published: How-to guides
+├── posts/                        # Published posts
 ├── published_assets/             # Published: Images/files for posts
+├── quartz-config/                # Quartz config under version control (NEW 2026-05-03)
+│   ├── quartz.config.ts          # Site config (theme, plugins, ignorePatterns)
+│   ├── quartz.layout.ts          # Sidebar/footer layout, Tools link, Explorer sort
+│   └── components/Tools.tsx      # Custom "Tools" sidebar component
+├── templates/                    # Obsidian templates (ignored by Quartz)
 ├── index.md                      # Homepage
-├── about.md                      # About page
 ├── .gitignore                    # What not to publish
 ├── robots.txt                    # Web crawler blocking
 ├── README.md                     # Not published (gitignored)
-└── Setup and Troubleshooting.md  # Not published (gitignored)
+└── Setup and Troubleshooting.md  # Tracked in repo; not published (Quartz ignorePatterns)
 ```
 
 ### Prometheus (Build & Serve)
 
 ```
 /home/chris/
-├── blog/                         # Git clone of blog repo (content source)
+├── blog/                         # Git clone of blog repo (content + quartz-config)
 ├── quartz-blog/                  # Quartz static site generator
 │   ├── content -> ../blog/       # Symlink to blog repo
-│   ├── quartz/                   # Quartz source
+│   ├── quartz/                   # Quartz source (custom components copied in by update-blog.sh)
 │   ├── public/                   # Built site (copied to nginx)
-│   └── quartz.config.ts          # Quartz configuration
+│   ├── quartz.config.ts          # Overwritten from blog/quartz-config each build
+│   └── quartz.layout.ts          # Overwritten from blog/quartz-config each build
+├── .tokens/
+│   └── literary-generators-dispatch  # Fine-grained PAT (Contents:write on literary-generators)
 ├── webhook-server-blog.js        # Webhook listener (port 3005)
-├── update-blog.sh                # Build and deploy script
+├── update-blog.sh                # Build, deploy, PUT RSS to literary-generators
 └── update-blog.log               # Deploy history
 
 /var/www/blog/                    # Nginx document root (served to web)
@@ -100,9 +113,14 @@ Obsidian (Athena) → GitHub → Webhook (Prometheus) → Quartz Build → Nginx
 drafts/
 assets/
 *.pdf
-"Setup and Troubleshooting.md"
 README.md
+private/
+templates/
+.DS_Store
+/setup-admin
 ```
+
+`Setup and Troubleshooting.md` is intentionally **not** gitignored — it's admin docs, not sensitive, and harmless if it slips out of a private repo. It's kept off the live site by Quartz's `ignorePatterns` only.
 
 **`robots.txt`:**
 
@@ -130,32 +148,38 @@ Disallow: /
 
 ### Quartz Configuration
 
-**File:** `/home/chris/quartz-blog/quartz.config.ts`
+**Source of truth:** `~/blog/quartz-config/` (in the GitHub repo). `update-blog.sh` copies these into `~/quartz-blog/` before each build, so layout/config edits go through git rather than SSH. Files in `~/quartz-blog/quartz.config.ts`, `~/quartz-blog/quartz.layout.ts`, and `~/quartz-blog/quartz/components/` should be considered build-time copies — edit them in `~/blog/quartz-config/` instead.
 
-**Key settings:**
+**Files:**
+
+- `quartz-config/quartz.config.ts` — site config (theme, plugins, ignorePatterns)
+- `quartz-config/quartz.layout.ts` — sidebar, footer, Explorer sort, Tools link
+- `quartz-config/components/Tools.tsx` — custom "Tools" sidebar block linking to literary-generators
+
+**Key settings in `quartz.config.ts`:**
 
 ```typescript
 configuration: {
   pageTitle: "WormLikeChain",
   enableSPA: true,
   enablePopovers: true,
-  analytics: null,
   baseUrl: "blog.wormlikechain.com",
   ignorePatterns: [
-    "private",
-    "templates", 
-    ".obsidian",
-    "drafts",
-    "assets",
-    "README.md",
-    "Setup and Troubleshooting.md",
-    "published"
+    "private", "templates", ".obsidian", "drafts", "assets",
+    "README.md", "Setup and Troubleshooting.md", "published",
+    "quartz-config",
   ],
   defaultDateType: "created",
 }
 ```
 
-**Layout:** Comments appear on all posts except index and about pages.
+**Editing the layout:** edit on Athena → commit → push. Webhook fires → `update-blog.sh` pulls → configs copied → Quartz rebuilds with new layout. No SSH needed for content/layout changes.
+
+**Layout highlights:**
+
+- Left sidebar `Explorer` is sorted by `dates.created` desc (newest first), not alphabetical.
+- Left sidebar has a `Tools` block under the Explorer linking to `https://blockbeard.github.io/literary-generators/`.
+- Footer keeps the stock GitHub + Discord links.
 
 ---
 
@@ -208,15 +232,71 @@ pm2 save
 
 **File:** `/home/chris/update-blog.sh`
 
+Three responsibilities:
+
+1. Pull latest content + Quartz config from the blog repo.
+2. Apply the version-controlled Quartz config (overwriting the runtime copies in `~/quartz-blog/`), then build and copy to nginx.
+3. Push the freshly-generated `index.xml` into the literary-generators repo via the GitHub Contents API — but only when the content actually differs (compared via `git hash-object` against the remote blob SHA), so identical builds don't generate empty commits.
+
 ```bash
 #!/bin/bash
 cd /home/chris/blog
 git pull origin main
 cd /home/chris/quartz-blog
+
+# Apply Quartz configs from the blog repo (so layout edits are version-controlled)
+CONFIG_SRC=/home/chris/blog/quartz-config
+if [[ -d "$CONFIG_SRC" ]]; then
+  cp "$CONFIG_SRC/quartz.config.ts" /home/chris/quartz-blog/quartz.config.ts
+  cp "$CONFIG_SRC/quartz.layout.ts" /home/chris/quartz-blog/quartz.layout.ts
+  if [[ -d "$CONFIG_SRC/components" ]]; then
+    cp -R "$CONFIG_SRC/components/." /home/chris/quartz-blog/quartz/components/
+  fi
+fi
+
+rm -rf public .quartz-cache
 npx quartz build
 sudo cp -r public/* /var/www/blog/
 echo "$(date): Blog updated" >> /home/chris/update-blog.log
+
+TOKEN_FILE="$HOME/.tokens/literary-generators-dispatch"
+FEED_SRC="/home/chris/quartz-blog/public/index.xml"
+TARGET_REPO="blockbeard/literary-generators"
+TARGET_PATH="_data/blog-feed.xml"
+
+if [[ -r "$TOKEN_FILE" && -f "$FEED_SRC" ]]; then
+  TOKEN="$(cat "$TOKEN_FILE")"
+  API_URL="https://api.github.com/repos/$TARGET_REPO/contents/$TARGET_PATH"
+
+  REMOTE_SHA="$(curl -sS \
+    -H "Authorization: Bearer $TOKEN" \
+    -H "Accept: application/vnd.github+json" \
+    "$API_URL" | jq -r '.sha // empty')"
+
+  LOCAL_SHA="$(git hash-object "$FEED_SRC")"
+
+  if [[ "$LOCAL_SHA" == "$REMOTE_SHA" ]]; then
+    echo "$(date): literary-generators feed unchanged, skipping PUT" >> /home/chris/update-blog.log
+  else
+    CONTENT_B64="$(base64 -w0 "$FEED_SRC")"
+    PAYLOAD="$(jq -n \
+      --arg msg "chore: update blog feed snapshot" \
+      --arg content "$CONTENT_B64" \
+      --arg sha "$REMOTE_SHA" \
+      '{message: $msg, content: $content} + (if $sha == "" then {} else {sha: $sha} end)')"
+
+    HTTP_CODE="$(curl -sS -o /tmp/lg-put.json -w '%{http_code}' -X PUT \
+      -H "Authorization: Bearer $TOKEN" \
+      -H "Accept: application/vnd.github+json" \
+      -H "X-GitHub-Api-Version: 2022-11-28" \
+      "$API_URL" \
+      -d "$PAYLOAD")"
+    echo "$(date): literary-generators feed PUT -> HTTP $HTTP_CODE" >> /home/chris/update-blog.log
+  fi
+fi
 ```
+
+**Dependencies:** `jq`, GNU `base64` (both standard on Pi OS — `apt install jq` if missing).
 
 **Permissions:** `chmod +x /home/chris/update-blog.sh`
 
@@ -377,6 +457,45 @@ WantedBy=multi-user.target
 
 ---
 
+### Literary Generators Feed Sync
+
+After each blog build, `update-blog.sh` pushes `~/quartz-blog/public/index.xml` (the just-generated RSS) into the **blockbeard/literary-generators** repo at `_data/blog-feed.xml` via the GitHub Contents API. A workflow in that repo then re-renders the "From the Blog" sidebar on https://blockbeard.github.io/literary-generators/ from the latest 5 items.
+
+**Why this design:** Cloudflare in front of `blog.wormlikechain.com` 403s GitHub Actions runners (Bot Fight Mode), so a runtime fetch from inside a workflow doesn't work. Pushing the RSS data file in lets the workflow read locally — no network, no CORS, no rate limits.
+
+**Components:**
+
+- **Token (Pi):** `~/.tokens/literary-generators-dispatch` — fine-grained PAT scoped to `blockbeard/literary-generators` only, **Contents: Read and write** permission, `chmod 600`.
+- **Pi pusher:** the tail block of `update-blog.sh` (see *Update Script* above) — computes the local blob SHA via `git hash-object`, compares to the remote SHA from a Contents API GET, only PUTs when they differ.
+- **Receiver workflow:** `.github/workflows/update-blog-posts.yml` in `blockbeard/literary-generators`. Triggers on `push` touching `_data/blog-feed.xml` (or manual `workflow_dispatch`). Runs `node scripts/update-blog-posts.mjs` which reads the committed RSS, regenerates the post list inside `<!-- BLOG_POSTS:START -->` … `<!-- BLOG_POSTS:END -->` sentinels in `index.html`, commits if changed. GitHub Pages auto-deploys.
+- **Sentinel block:** `index.html` in the literary-generators repo has the static post list wrapped in those two HTML comments — that's the only zone the script touches.
+
+**Verifying:**
+
+```bash
+bash ~/update-blog.sh
+tail -3 /home/chris/update-blog.log
+```
+
+Expect either:
+
+- `feed PUT -> HTTP 200` (real change pushed; workflow run appears within ~30s at https://github.com/blockbeard/literary-generators/actions)
+- `feed unchanged, skipping PUT` (no real change; nothing to do)
+
+**If the literary-generators sidebar gets stale:**
+
+1. Check `tail -20 /home/chris/update-blog.log` — is the script logging PUT 200s or skipping?
+2. Check the latest run in https://github.com/blockbeard/literary-generators/actions — failure?
+3. Verify the PAT: `curl -sI -H "Authorization: Bearer $(cat ~/.tokens/literary-generators-dispatch)" https://api.github.com/repos/blockbeard/literary-generators` → expect `200`. If `401`/`403`, mint a new fine-grained PAT with the right scope.
+
+**Common issues:**
+
+- `feed PUT -> HTTP 401`/`403`: PAT expired or wrong scope. Replace the file in `~/.tokens/`.
+- `jq: command not found`: `sudo apt install jq`.
+- Empty commits showing on the literary-generators repo: shouldn't happen with the SHA pre-check, but if it does the `paths:` filter on the workflow trigger means an empty commit doesn't fire the workflow — harmless cosmetic noise.
+
+---
+
 ## Content Workflow
 
 ### Writing Posts
@@ -441,23 +560,29 @@ WantedBy=multi-user.target
 ```yaml
 ---
 title: Post Title
-date: 2025-11-10
+date: 2026-05-03
 ---
 ```
 
-**Optional:**
+**Standard:**
 
 ```yaml
 ---
 title: Post Title
-date: 2025-11-10
+date: 2026-05-03
 tags:
   - tag1
   - tag2
-description: Short summary for RSS/social
-draft: false
+description: Short summary used in RSS <description> and OG metadata
 ---
 ```
+
+**Notes on `date:`** — Quartz's `priority: ["frontmatter", "git", "filesystem"]` means whatever you put here wins over git history and filesystem mtime. **Always pin `date:` explicitly** for two reasons:
+
+1. The Pi's `~/quartz-blog/content/` is a symlink into `~/blog/`, and Quartz's git-history lookup runs from `~/quartz-blog/` where the path isn't tracked. Without an explicit `date:`, you get warnings like *"isn't yet tracked by git, dates will be inaccurate"* and Quartz falls back to filesystem mtime.
+2. Crucially: if you commit a previously-uncommitted post and Quartz has been using filesystem mtime, the next build with a new committed-at-today date would change the RSS `<pubDate>`, and aggressive RSS readers may re-notify subscribers. Pinning `date:` to the original publish date keeps the RSS stable.
+
+**Drafts** — files in `drafts/` are skipped by Quartz (in `ignorePatterns`). Move out of drafts to publish; don't rely on `draft: true` frontmatter as a primary mechanism.
 
 ---
 
@@ -888,13 +1013,21 @@ sudo tail -50 /var/log/nginx/error.log
 
 ## Update History
 
+**2026-05-03:** Quartz config under version control + Literary Generators feed sync
+
+- Moved `quartz.config.ts` and `quartz.layout.ts` from `~/quartz-blog/` (Pi only) into `~/blog/quartz-config/` so layout edits go through git. `update-blog.sh` copies them into the Quartz install before each build.
+- Added a `Tools` block to the left sidebar with a link to `https://blockbeard.github.io/literary-generators/`. Lives in `quartz-config/components/Tools.tsx`.
+- Switched the Explorer sidebar from alphabetical to date-desc (newest first).
+- Wired the blog-build → literary-generators feed sync: `update-blog.sh` PUTs the freshly-built `index.xml` into `blockbeard/literary-generators` at `_data/blog-feed.xml` via the GitHub Contents API. PAT lives at `~/.tokens/literary-generators-dispatch`. Companion workflow in literary-generators consumes the feed and re-renders the "From the Blog" sidebar. Skips PUTs (and avoids empty commits) when the local blob SHA matches the remote.
+- Backfilled frontmatter (`title`, `date`, `tags`, `description`) on posts that were missing it. Pinned `date:` to original publish dates so the RSS `pubDate` doesn't shift and subscribers don't re-notify.
+- Posts now live under a single `posts/` folder (replacing the earlier `reviews/`, `musings/`, `tutorials/` split).
+
 **2025-11-10:** Initial blog setup complete
 
 - Quartz v4.5.2 installed
 - Isso comments configured (port 8081)
 - Webhook auto-deploy working
 - Dark mode comment styling fixed
-- Directory structure: reviews/, musings/, tutorials/
 - RSS feed functional
 
 ---
@@ -920,5 +1053,5 @@ sudo tail -50 /var/log/nginx/error.log
 
 ---
 
-**Last verified working:** 2025-11-10  
+**Last verified working:** 2026-05-03  
 **Next review:** When making significant changes
