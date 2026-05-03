@@ -1,3 +1,12 @@
+---
+title: On Maps
+date: 2026-03-04
+description: A poem about maps in fantasy books, written for Prismatic Wasteland's "the map is not the territory" blog bandwagon.
+tags:
+  - poetry
+  - maps
+  - blog-bandwagon
+---
 I read noise sans signal's post on [the Bloggies missing a poetry category](https://noisesanssignal.blogspot.com/2026/02/the-category-that-bloggies-are-missing.html). I'm not sure if they are right, but I wish they were. When I saw Prismatic Wasteland's [bandwagon on maps](https://www.prismaticwasteland.com/blog/bandwagon-the-map-is-not-the-territory-but-it-is-the-topic) it seemed like the perfect opportunity.
 This is my first poem since I was forced to write one in school several decades ago. 
 # The Map is Not the Territory

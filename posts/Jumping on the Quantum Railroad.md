@@ -2,6 +2,10 @@
 title: Jumping on the Quantum Railroad
 date: 2026-01-29
 tags:
+  - daggerheart
+  - encounter
+  - gm-advice
+  - game-material
 description: "The quantum ogre represents everything wrong with railroading: no matter which path players choose, they fight the ogre. But what if it was literally true? Stats for a Tier 2 Daggerheart encounter featuring a probability-warped ogre assassin who exists in multiple quantum states, supported by reality-bending butterflies. Includes full environment features with foreshadowing mechanics. Works as self-aware humor or genuine eldritch threat."
 ---
 # Quantum Ogres

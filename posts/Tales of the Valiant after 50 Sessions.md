@@ -2,6 +2,8 @@
 title: Tales of the Valiant after 50 Sessions
 date: 2026-02-17
 tags:
+  - review
+  - 5e
 description: A review of Kobold Press's Tales of the Valiant 5e TTRPG after playing 50 sessions with it. What's in the books, how it plays and whether it is worth switching from D&D
 ---
 ![Tales of the Valiant Logo](https://www.talesofthevaliant.com/wp-content/uploads/2024/05/Tales-of-the-Valiant-Logo-STANDARD-FINAL-1024x329.png)In January of 2025, I started a campaign running [Tales of the Valiant](https://www.talesofthevaliant.com/) (ToV). We have now run fifty sessions, so I have a little bit more to go on than my initial impressions from reading through the book. I'll cover what is in there, how I have found it at the table and consider whether I think it is worth buying.  

@@ -2,6 +2,12 @@
 title: How to Win a TTRPG
 date: 2026-03-13
 tags:
+  - gm-advice
+  - collaborative-worldbuilding
+  - love
+  - trust
+  - philosophy
+  - muppets
 description: |-
   A reflection on how Jim Henson's advice about collaboration applies to running and playing TTRPGs, breaking it down into five principles: talent, trust, ideas, space, and invitation. 
   What makes great games isn't system mastery or acting ability, it's building an environment where everyone at the table feels safe to contribute and where those contributions matter.

@@ -1,3 +1,13 @@
+---
+title: Unified Dice Mechanics for Old-School Games
+date: 2025-11-27
+tags:
+  - old-school-renaissance
+  - mechanics
+  - game-design
+  - shadowdark
+description: Considering whether old-school D&D needs a unified resolution mechanic, and exploring a d20 roll-high approach that preserves B/X probabilities for attacks, saves, ability checks, and thief skills.
+---
 Recently the topic has come up on the [Sly Flourish](https://slyflourish.com/)Discord that OSR systems can be a bit of a mess with resolution mechanics compared to more modern games, it is a topic I've thought about before. I have never liked the thief skills from early editions with their awkward sometimes a d6 sometimes a d100 system. I even have an unpublished B/X hack where I attempted to resolve it, though after writing this post I have changed my mind on it being a better system. 
 
 The questions are:

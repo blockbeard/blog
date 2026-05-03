@@ -2,6 +2,8 @@
 title: Year end Review and 2026 Goals
 date: 2026-01-01
 tags:
+  - game-material
+  - year-in-review
 description: A look back on my 2025 resolutions and year in gaming and a look forward to next year with goals and accountability
 ---
 This is mostly going to be about TTRPG things, but I do have some personal goals I'm pleased with so I will give them a mention.
