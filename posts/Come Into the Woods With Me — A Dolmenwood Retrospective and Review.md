@@ -37,12 +37,14 @@ The campaign book has great encounter tables split by time of day and with sub-t
 # Arc Two - Death in Lankshorn
 As a change from our previous characters we played a more ragged bunch, hired by our previous characters to clear out an old tower. I played a Grimalkin (anthropomorphic cat) thief, Jack Flippancy. Jack's former career was as a stage magician and he arrived in the Dolmenwood from fairy after messing up a magic trick and pulling himself out of a hat. Making the best of it he stayed here to fulfil his life's dream of growing enormously fat. (More detail sparked from the random character rolls.)
 ![Three Grimalkin cat-folk adventurers in a mossy forest — an armoured warrior with sword, a staff-bearing companion, and a map-reading mage — attended by fairies.](</published_assets/Dolmenwood_Player_s_Book_2024-03-05 3.webp>)
+
 I was sad to leave Tamrin behind until I started playing Jack; he was great fun, helped enormously by my appetite for whimsy and wordplay meshing so well with the setting and our GM. 
 Grimalkin have fairy glamours, minor magical abilities. Jack rolled silver tongue, the ability to speak to animals. We went full fairytale and decided this only worked if all the speech was in rhyming couplets. 
 Literally fantastic. 
 
 We started in a new town, Lankshorn, in the south where there were political shenanigans going on between noble rivals and we dropped into another of the pre-written adventures, [Emelda's Song](https://www.drivethrurpg.com/en/product/527293/emelda-s-song?affiliate_id=1070389). Our investigations led us to the Malbleat family crypts where we encountered strange experiments, cursed creatures, the bad kind of fairy wine and, thanks to our foolish overconfidence, our Doom.
 ![Red-haired fairies crushed inside a stone mortar and pestle, red juice running down its side — the bad kind of fairy wine.](</published_assets/Fairy Pestle.webp>)
+
 After just 8 sessions this arc ended in defeat as we tried to prevent Lord Malbleat's vile ritual and decided to take on the undead head-on rather than trying for a smart solution. 
 This is still a deadly system, especially at lower levels. We were all sad to lose our characters; they were a weird bunch but they had great chemistry. 
 
@@ -55,12 +57,14 @@ Lesser, Greater and Mighty Runes have variable uses by level but early on can be
 Clerics and Friars gain holy magic, essentially the standard selection of cleric spells but each one named for a Saint of the Pluritine Church, with a little blurb about what the saint is known for.  The holy spellcasters we had in our game made great use of this to add immersion and richness to the world. We both made up impromptu prayers of intercession with the appropriate saints as we cast. 
 
 ![Dolmenwood spell entry for Bless, here named 'Righteousness of St Gondyw', with a flavour sidebar describing the saint's miracle.](</published_assets/Bless.webp>)
+
 The Pluritine Church, the organised religion of the One True God, is one of the factions within Dolmenwood and an easy supplier of plot-hooks as they wish to restore the many ruined shrines to be found in the wood. There are other religions but the Catholic-coded Pluritine Church is the dominant one, as an atheist with some Catholic education it worked very well for me but I know some people do find it off-putting.   
 # Arc Three - Fungus, Fairyland and Finale
 We rolled another set of characters, this time I got Rogbert Sundeman, a vain, arrogant and cowardly Human Knight. After our last party died opposing House Malbleat's wicked plans, I of course chose to swear my fealty to House Malbleat. 
 Our GM bounced back from her first TPK with great style and rolled the results of our failing to stop the ritual into our next arc as we embarked on a quest to find a cure for Lord Malbleat, struck down by the thing he had sought to control and which had escaped into the forest.   
 I had a great time here, repeatedly spending all of the party's money on fine clothes, expensive wine and horses. Which makes me sound like a dick but we were a very high-trust table by this point, the players were cool with it even if the characters might not have loved it. 
 ![Arthur Rackham-style watercolour of an armoured knight driving his sword into a fanged dragon while villagers watch from doorways.](</published_assets/Sir Rogbert.webp>)
+
 We started with (I believe) [The Fungus that Came to Blackeswell](https://www.drivethrurpg.com/en/product/527289/the-fungus-that-came-to-blackeswell?affiliate_id=1070389) though we soon went completely off track. I think at least one of the other players was a little frustrated with us starting over at first level again and they really wanted to get more involved with faction play so we decided to shake things up a little. 
 Abandoning Lord Malbleat to his fate (the danger of being a chaotic aligned lord sending out chaotic knights), we did various shenanigans, dropped a village into the fairy-realm then scarpered down a fairy road to avoid pursuit. We spent quite a few sessions here playing through [The Labyrinth](https://www.drivethrurpg.com/en/product/320014/jim-henson-s-labyrinth-the-adventure-game?affiliate_id=1070389&keyword=labyrinth) which was a fantastic fit here. 
 Sir Rogbert became the only knight in the Dolmenwood knighted by a true king, before returning to a randomly determined hex to rumours of a new power in the woods raising a great black tower (surely nothing to do with us). 
@@ -73,6 +77,7 @@ As sad a day as I have had playing a TTRPG, I expect to remember this game for t
 
 # Interlude - Eat, Drink and be Merry
 ![A Dolmenwood feast: piled fruits, breads, cheeses, and a bone-filled tureen between flaming candelabras, in warm yellows and browns.](</published_assets/Food and drink.webp>)
+
 There is so much richness in the material, I have still only skimmed the Campaign Book which I know has much more than is in the Player's Book but the local foods, wines and other drinks, pipe leaf (and the "give us a hint GM" smoke and ponder mechanic) along with the character generation, the magic, the setting information and more all combine into a rich stew that could only be surpassed perhaps by Sir Rogbert's favourite Larks tongues in Aspic, or Tamrin's delight with the more homely Trottel Mash. 
 
 # The System
