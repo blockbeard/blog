@@ -107,4 +107,4 @@ If you like strongly grounded fantasy with a majority-human setting or hate any 
 I promise you will have a good time. 
 You may get lost here but who would ever want to leave anyway?   
 
-If you enjoyed this post, please subscribe via [RSS](/index.xml), and if you din't check it out at the start go read [Patchwork Paladin's post](https://patchworkpaladin.com/2026/05/12/a-dolmenwood-retrospective/)) on the same campaign from the GM side. 
+If you enjoyed this post, please subscribe via [RSS](/index.xml), and if you didn't check it out at the start go read [Patchwork Paladin's post](https://patchworkpaladin.com/2026/05/12/a-dolmenwood-retrospective/) on the same campaign from the GM side. 
