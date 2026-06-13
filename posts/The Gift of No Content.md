@@ -20,9 +20,9 @@ The core book has six mini-settings with an innovative campaign frame system. Th
 The one adventure, Sablewood Messengers, has been available since beta testing and has a 10-page setting to go with it, and it's a single-session quickstart adventure. 
 That's it for first-party setting or adventure content after the first year except for a convention adventure not readily available. 
 
-The Hope and Fear rules supplement is due soon but is mostly mechanics and more campaign frames. There is another one-shot adventure for Free RPG Day, and an announced Chris Perkins adventure supplement, details and release date pending. 
+The Hope and Fear rules supplement is due soon but is mostly mechanics and more campaign frames. There is another one-shot adventure due for Free RPG Day, and an announced Chris Perkins adventure supplement, details and release date pending. 
 
-Some major third-party releases have been announced, a Dungeons of Drakkenheim conversion and something from Eberron creator Keith Baker, both announced by Darrington Press and are if not official then have their blessing.  
+Some major third-party releases have been announced, a Dungeons of Drakkenheim conversion and something from Eberron creator Keith Baker. Both announced by Darrington Press and are, if not official then clearly, have their blessing.  
 
 # Is This Enough? 
 I was in the definite no camp. When Daggerheart released I wanted an official adventure to show me how it's supposed to work. 
