@@ -86,9 +86,11 @@ Well, that's an easy one. Any decent necromancer can of course make a facsimile 
 
 Now, years later, the King's still-perfect corpse infused with his subtlest necromancy. The villain's plan has come to fruition. The corpse is reanimated as a form of higher undead, under his control but with sufficient function to impersonate the old King. 
 With the aid of the court magician, the real royal signet and a story about how he had to flee to avoid being poisoned by his greedy son he has returned to take back his "rightful throne". Civil war rages, the kingdom is in ruins, and the capital and half the Kingdom is ruled over by the necromancer and his puppet king, while the new King seeks allies to overthrow the necromancer and reunite the Kingdom. 
+
 Is it good? I think it is OK, I have enough to work with that I can think of some adventure hooks to get the PCs involved. Maybe they can even get hired by the new king to investigate what has happened and foil the plot. It is original (well the shape is vaguely familiar but it all came out of my brain while I sat here writing this blog), I don't need to worry if I'm stealing anyone else's ideas. I think with some polish it could make a decent scenario. 
 
 I started talking about a city I planned to build, now I have introduced the literary generator and how to use it, let's get back to that. 
+
 Luckily, our villain is ruling over the capital so let's make the capital. 
 As a starting point I'll take some ideas from [Kobold Press's Campaign Builder: Cities and Towns](https://www.drivethrurpg.com/en/product/427953/campaign-builder-cities-towns?affiliate_id=1070389). It does of course have a whole set of ideas and tables for building cities but I'll take their questions and use my generator to answer them. 
 
@@ -135,22 +137,25 @@ We already know it's a monarchy, we could rework that based on the answer here b
 Oh, it's a monarchy alright. None of this constitutional nonsense, the absolute monarch rules with an iron fist. I like it, gives us a little tension, the necromancer ruined the kingdom but the ruling house weren't necessarily good people either. 
 
 Maybe it would have been easier to use the tables in the book. In fact, let's compare: 
-**What is the City's Age?** 
+
+### **What is the City's Age?** 
 1 - New community (unplanned/organic)
-**What Is the City's Primary Function?** 
+### **What Is the City's Primary Function?** 
 3 - *Creation.* The tall grasses of this region make wonderful, fragrant baskets. Crafters have mastered the art of weaving amazing creations of all sorts.
-**What Are the City's Trade Goods?**
+### **What Are the City's Trade Goods?**
 8 - Spices
-**What is the city's size and population?**
+### **What is the city's size and population?**
 7 - Large City 10,000 - 30,000
-**What Is the City's Government Structure?**
+### **What Is the City's Government Structure?**
 3 - Dictatorship
 
 These are all fine, I can use these as a starting point and there are many more questions to ask and tables of answers. The biggest downside compared to using the generator is I haven't thought about them. I could ask myself why it was a new city or what was special about the area that led to such fine grasses, but coming at it from that side is harder for me. 
 
 # Random Conclusions
 I hope you found this stream-of-consciousness post useful or interesting and enjoyed a peek at someone else's creative process. 
+
 I know we all do things differently but I find it easier to take some input and work my way to an answer than take the answer and work back to the reason as I would with a more traditional random table. 
+
 I'd love to hear how it goes for you if you try the generator, and see anything you make with its help.  
 
 
