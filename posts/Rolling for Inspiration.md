@@ -32,7 +32,8 @@ I would like to try my hand at it so let's make a start on that and shill for th
 My brain finds it difficult to be creative looking at a blank page, but I think I do well when I have something to spark my imagination or someone else to bounce ideas off. 
 
 Random tables are OK, but if you give me the answer, like "2d4 wolves", then I struggle to use that as a starting point, it gives me the destination but for me the creativity is in the journey. 
-I need the Goldilocks amount of randomness, enough to spark some neurons but without giving me the answer. 
+I need the Goldilocks amount of randomness, enough to spark some neurons but without giving me the answer.
+
 Another issue with a lot of the random table sources I have is that I would like to write more for publication. While I might be able to use Raging Swan's [Dread Thingonomicon](https://www.drivethrurpg.com/en/product/406161/the-dread-thingonomicon?affiliate_id=1070389) or Matt Finch's [Tome of Adventure Design](https://www.drivethrurpg.com/en/product/396154/tome-of-adventure-design-revised?affiliate_id=1070389) to make and stock a pretty dungeon, if it isn't for home use then I'm into a moral and legal grey area using their results if I want to publish what I wrote.
 
 One thing I have been doing for inspiration is taking a random book, opening it at a random page and picking a sentence at random and using that. I found it works well for me. You never get the answer, but you get something that gets your brain making connections. 
