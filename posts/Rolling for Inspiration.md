@@ -12,9 +12,13 @@ description: Random tables give you the answer; I wanted something that just giv
 
 # Introduction
 Prismatic Wasteland has another [blogwagon](https://www.prismaticwasteland.com/blog/random-blogwagon) this month, this one on the topic of randomness. Since it was randomness there was a table to use to determine some things about your post. These were my results: 
+
 **d20 Assigned Posting Window:** 15 - 15th June
+
 **2d6 Length of Post:** 8 - as long or short as you like
+
 **Card. Include a Reference & Link to a Blog Post from…** 7 Clubs - [Against the wicked city](https://udan-adan.blogspot.com/p/against-wicked-city.html)
+
 
 Whoops, the 15th was yesterday (I rolled these last week so totally my fault). I guess I better write something then. 
 Against the Wicked City looks interesting, but my brain doesn't do well with the sort of big lists of posts that the main page has, so let's call it inspiration. 
@@ -56,6 +60,7 @@ To the generator! I hit new quote (there is filtering but I like the basic "New 
 
 I get: 
 > Magic pill saves corpse from corruption.
+> 
 > *Stith Thompson, Motif-Index — T85.2*
 
 It doesn't give answers like the Tome of Adventure Design would so I have to think about what this means. 
@@ -66,6 +71,7 @@ In the years since the court magician has been gradually feeding magical power i
 
 No, wait. Let's see how he acquired the body. 
 > Come thy ways, Signior Fabian.
+> 
 > *William Shakespeare, Twelfth Night, II.5 — belch*
 
 In the play Fabian was a prankster and troublemaker, a noblewoman's servant. The court magician convinced a servant that his mistress could be embarrassed by some shenanigans with the Kings's body. No, that's too far fetched. He did convince him to switch the King's signet ring for his mistresses in a way that implied they were having an affair, meaning the ring that got passed to the Crown Prince is a fake. 
@@ -73,6 +79,7 @@ In the play Fabian was a prankster and troublemaker, a noblewoman's servant. The
 It remains a mystery how the body was stolen. Let's give it one more try. 
 
  > Thou shalt not make thee any graven image, or any likeness of any thing that is in heaven above, or that is in the earth beneath, or that is in the waters beneath the earth:
+ > 
 > *King James Bible, Deuteronomy 5:8*
 
 Well, that's an easy one. Any decent necromancer can of course make a facsimile of a corpse. 
@@ -97,6 +104,7 @@ If we are up to Henry VIII the city must be old. Let's say 20 years per generati
 
 ## What Is the City's Primary Function? 
 > The king presides, his subjects’ toil surveys;
+> 
 > *Virgil, The Georgics — Book IV*
 
 Amazing how often it drops you something obvious. 
@@ -105,6 +113,7 @@ The city is the seat of Royal Power. Neither a great trade hub, industrial centr
 I feel like we already answered this but maybe we can get a hint about what the estate did before it provided the seed for the city? 
 
 > Pallas, in all things it is mine to swell
+> 
 > *Aeschylus, The Eumenides — Apollo*
 
 From the context, Pallas here is referring to the goddess Athena.  The estate was obviously sited here because of the holy shrine already on the site. It now serves as the city's holiest site, the tiny ancient shrine being fully enclosed in the grand temple here. 
@@ -112,6 +121,7 @@ From the context, Pallas here is referring to the goddess Athena.  The estate wa
 ## What is the city's size and population? 
 
 > Sole in these fields! yet will I not despair.
+> 
 > *— Matthew Arnold, “Thyrsis, a Monody”*
 
 Seems like it's a pretty small city. Actually a town I think, only considered a city because of its role as the administrative capital. 
@@ -119,6 +129,7 @@ Seems like it's a pretty small city. Actually a town I think, only considered a 
 We already know it's a monarchy, we could rework that based on the answer here but monarchy is pretty vague so let's see what we get then decide. 
 
 > Advancing in his might, Patroclus smote
+> 
 > *Homer, The Iliad — Book XVI: The Sixth Battle—Death of Patroclus*
 
 Oh, it's a monarchy alright. None of this constitutional nonsense, the absolute monarch rules with an iron fist. I like it, gives us a little tension, the necromancer ruined the kingdom but the ruling house weren't necessarily good people either. 
