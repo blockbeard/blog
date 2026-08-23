@@ -44,6 +44,11 @@ I love this sort of minimal worldbuilding, I have [[Rolling for Inspiration|blog
 
 We did a little collaborative worldbuilding when we drew them, the Gambol is always a rooftop district for example, we added the detail of the floating masonry because it was located above the Alchemist's Quarter.
 
+<figure>
+<img src="/published_assets/The%20City%20Handout.webp" alt="The handout I sent my players detailling the City we built togther. 4/6 of it is a map if the city with the remaining 2/6 as text. It is designed to be folded up like the sort of city map you would get from a tourist information booth.">
+<figcaption style="color: var(--gray); font-size: 0.85em; text-align: center;">The City Map Handout</figcaption>
+</figure>
+
 ## Prelude
 
 We passed through the Ossuary, the entrance to the underworld cared for by the sisters of the Silent Order. They wear elaborate veiled headdresses topped with the skull of the previous holder of their station. Their rank can be determined by the height of this elaborate headgear.
